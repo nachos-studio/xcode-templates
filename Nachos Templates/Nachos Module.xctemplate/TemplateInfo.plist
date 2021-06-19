@@ -39,6 +39,16 @@
 			<key>Default</key>
 			<string>View</string>
 		</dict>
+		<dict>
+  			<key>Identifier</key>
+  			<string>GenerateTableView</string>
+  			<key>Name</key>
+  			<string>Based on UITableView</string>
+  			<key>Description</key>
+  			<string>Based on UITableView</string>
+  			<key>Type</key>
+  			<string>checkbox</string>
+		</dict>
 	</array>
 </dict>
 </plist>

@@ -4,11 +4,19 @@ import UIKit
 
 final class ___VARIABLE_productName:identifier___ViewController: UIViewController {
 
+    // MARK: - Neested Types
+
+    private enum Constant {
+
+    }
+
     // MARK: - Public Properties
 
     var output: ___VARIABLE_productName:identifier___ViewOutput?
 
     // MARK: - Subviews
+
+    // MARK: - Private Properties
 
     // MARK: - Lifecycle
 
@@ -18,6 +26,12 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
     }
 
     // MARK: - Actions
+
+}
+
+// MARK: - Public Methods
+
+extension ___VARIABLE_productName:identifier___ViewController {
 
 }
 
@@ -31,11 +45,30 @@ extension ___VARIABLE_productName:identifier___ViewController: ___VARIABLE_produ
 
 private extension ___VARIABLE_productName:identifier___ViewController {
 
-    func configureAppearance() {
+    private func configureAppearance() {
+        configureView()
+        configureSubviews()
+        configureConstraints()
+        configureInitialState()
+    }
+
+    private func configureNavigation() {
 
     }
 
-    func configureNavigation() {
+    private func configureView() {
+
+    }
+
+    private func configureSubviews() {
+
+    }
+
+    private func configureConstraints() {
+
+    }
+
+    private func configureInitialState() {
 
     }
 

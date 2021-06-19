@@ -7,20 +7,15 @@ final class ___VARIABLE_productName:identifier___View: NKView {
 
     // MARK: - Neested Types
 
-    private enum Constants {
+    private enum Constant {
 
     }
 
     // MARK: - Public Properties
 
-
-
     // MARK: - Subviews
 
-
-
-    // MARK: - Public Properties
-
+    // MARK: - Private Properties
 
     // MARK: - Lifecycle
 

@@ -23,6 +23,7 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureAppearance()
+        self.output?.ready()
     }
 
     // MARK: - Actions
@@ -39,6 +40,10 @@ extension ___VARIABLE_productName:identifier___ViewController {
 
 extension ___VARIABLE_productName:identifier___ViewController: ___VARIABLE_productName:identifier___ViewInput {
 
+    func configure() {
+
+    }
+
 }
 
 // MARK: - Private methods
@@ -48,6 +53,7 @@ private extension ___VARIABLE_productName:identifier___ViewController {
     private func configureAppearance() {
         configureView()
         configureSubviews()
+        configureNavigation()
         configureConstraints()
         configureInitialState()
     }

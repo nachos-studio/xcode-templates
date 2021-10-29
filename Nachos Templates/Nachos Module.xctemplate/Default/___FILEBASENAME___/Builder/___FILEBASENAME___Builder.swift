@@ -17,6 +17,7 @@ final class ___VARIABLE_productName:identifier___Builder {
         let presenter = ___VARIABLE_productName:identifier___Presenter()
 
         view.output = presenter
+        presenter.output = output
 
         presenter.view = view
         presenter.router = router

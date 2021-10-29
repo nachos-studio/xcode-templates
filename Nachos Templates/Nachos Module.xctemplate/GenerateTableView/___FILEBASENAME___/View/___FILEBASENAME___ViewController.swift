@@ -14,7 +14,10 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
         case main
     }
 
-    private typealias Item = <#Item type#>
+    private enum Item {
+        case cell
+    }
+
     private typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
     private typealias DataSource = UITableViewDiffableDataSource<Section, Item>
 
@@ -35,6 +38,7 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureAppearance()
+        self.output?.ready()
     }
 
     // MARK: - Actions
@@ -51,6 +55,12 @@ extension ___VARIABLE_productName:identifier___ViewController {
 
 extension ___VARIABLE_productName:identifier___ViewController: ___VARIABLE_productName:identifier___ViewInput {
 
+    func configure() {
+        var snapshot = Snapshot()
+
+        dataSource.apply(snapshot)
+    }
+
 }
 
 // MARK: - Private methods
@@ -60,6 +70,7 @@ private extension ___VARIABLE_productName:identifier___ViewController {
     private func configureAppearance() {
         configureView()
         configureSubviews()
+        configureNavigation()
         configureConstraints()
         configureInitialState()
     }
@@ -94,7 +105,12 @@ private extension ___VARIABLE_productName:identifier___ViewController {
     }
 
     private func dequeReusableCell(for tableView: UITableView, indexPath: IndexPath, item: Item) -> UITableViewCell? {
-        return nil
+        switch item {
+        case .cell:
+            let cell = tableView.dequeueReusableCell(withClass: UITableViewCell.self, for: indexPath)
+            //cell.configure(with: viewModel)
+            return cell
+        }
     }
 
 }

@@ -2,4 +2,6 @@
 
 protocol ___VARIABLE_productName:identifier___ViewInput: AnyObject {
 
+    func configure()
+
 }

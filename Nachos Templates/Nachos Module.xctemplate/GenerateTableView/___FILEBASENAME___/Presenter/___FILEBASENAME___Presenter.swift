@@ -18,6 +18,10 @@ final class ___VARIABLE_productName:identifier___Presenter {
 
 extension ___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___ViewOutput {
 
+    func ready() {
+        view?.configure()
+    }
+
 }
 
 // MARK: - ___VARIABLE_productName:identifier___Input

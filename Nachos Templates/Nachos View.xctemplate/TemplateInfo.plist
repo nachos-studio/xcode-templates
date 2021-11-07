@@ -47,6 +47,16 @@
   			<key>Type</key>
   			<string>checkbox</string>
 		</dict>
+		<dict>
+  			<key>Identifier</key>
+  			<string>GenerateViewModel</string>
+  			<key>Name</key>
+  			<string>Also create view model file</string>
+  			<key>Description</key>
+  			<string>Create a view model file with the same</string>
+  			<key>Type</key>
+  			<string>checkbox</string>
+		</dict>
 	</array>
 </dict>
 </plist>

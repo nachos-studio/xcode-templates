@@ -6,4 +6,5 @@ XCODE_TEMPLATES=~/Library/Developer/Xcode/Templates
 mkdir -p $XCODE_TEMPLATES
 
 cp -r "Nachos Templates" $XCODE_TEMPLATES
+cp -r "AdCombo Templates" $XCODE_TEMPLATES
 

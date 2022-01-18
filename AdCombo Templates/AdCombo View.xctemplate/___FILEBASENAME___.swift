@@ -2,7 +2,7 @@
 
 import UIKit
 
-final class ___VARIABLE_productName:identifier___View: SFView {
+final class ___VARIABLE_productName:identifier___: SFView {
 
     // MARK: - Public Properties
 
@@ -33,7 +33,7 @@ final class ___VARIABLE_productName:identifier___View: SFView {
 
 // MARK: - Public Methods
 
-extension ___VARIABLE_productName:identifier___View {
+extension ___VARIABLE_productName:identifier___ {
 
     func set() {
 
@@ -43,7 +43,7 @@ extension ___VARIABLE_productName:identifier___View {
 
 // MARK: - Private Methods
 
-private extension ___VARIABLE_productName:identifier___View {
+private extension ___VARIABLE_productName:identifier___ {
 
     private func configureView() {
 

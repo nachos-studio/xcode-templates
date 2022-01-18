@@ -10,17 +10,6 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
 
     }
 
-    private enum Section {
-        case main
-    }
-
-    private enum Item {
-        case cell
-    }
-
-    private typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
-    private typealias DataSource = UITableViewDiffableDataSource<Section, Item>
-
     // MARK: - Public Properties
 
     var output: ___VARIABLE_productName:identifier___ViewOutput?
@@ -31,7 +20,7 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
 
     // MARK: - Private Properties
 
-    private lazy var dataSource = createDataSource()
+    private lazy var dataSource = DataSource.create(tableView: tableView)
 
     // MARK: - Lifecycle
 
@@ -98,23 +87,37 @@ private extension ___VARIABLE_productName:identifier___ViewController {
 
     }
 
-    private func createDataSource() -> DataSource {
-        DataSource(tableView: tableView) { [weak self] (tableView: UITableView, indexPath: IndexPath, item: Item) in
-            return self?.dequeReusableCell(for: tableView, indexPath: indexPath, item: item)
-        }
-    }
-
-    private func dequeReusableCell(for tableView: UITableView, indexPath: IndexPath, item: Item) -> UITableViewCell? {
-        switch item {
-        case .cell:
-            let cell = tableView.dequeueReusableCell(withClass: UITableViewCell.self, for: indexPath)
-            //cell.configure(with: viewModel)
-            return cell
-        }
-    }
-
 }
 
 extension ___VARIABLE_productName:identifier___ViewController: UITableViewDelegate {
+
+}
+
+private enum Section {
+
+    case main
+
+}
+
+private enum Cell: Hashable {
+
+    case cell(Int)
+
+}
+
+private typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Cell>
+
+private final class DataSource: UITableViewDiffableDataSource<Section, Cell> {
+
+    static func create(tableView: UITableView) -> DataSource {
+        DataSource(tableView: tableView) { (tableView, indexPath, item) -> UITableViewCell? in
+            switch item {
+            case .cell(let viewModel):
+                let cell = tableView.dequeueReusableCell(withClass: UITableViewCell.self, for: indexPath)
+                cell.configure(with: viewModel)
+                return cell
+            }
+        }
+    }
 
 }
